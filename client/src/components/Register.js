@@ -3,10 +3,10 @@ import { useState } from 'react'
 import Axios from 'axios'
 
 const Register = () => {
-    const [fullname, setFullname] = useState('')
-    const [username, setUsername] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [fullname, setFullname] = useState('');
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     //registration
     const Registration = (e) => {
