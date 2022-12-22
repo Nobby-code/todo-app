@@ -1,0 +1,52 @@
+.register-page{
+    /* display: none; */
+}
+.login-page-page{
+    width: 30%;
+    height: 80vh;
+    background-color: #EDF3F5;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: 0px 1px;
+}
+
+.italic{
+    margin: 40px;
+}
+
+.login-title{
+    color: 000000;
+    font-size: 30px;
+    margin-top: 30px;
+    
+}
+
+.login-inputs input{
+    margin: 10px;
+    width: 200px;
+    /* height: 30px; */
+    font-size: 18px;
+}
+
+.login-inputs .username-input,.pswd-input{
+    height: 32px;
+    outline-style: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.login-button{
+    height: 42px;
+    background-color: #374B54;
+    color: white;
+    padding: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.login-button:hover{
+    cursor: pointer;
+    background-color: green;
+    transition: .1s;
+}
