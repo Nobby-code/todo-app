@@ -129,16 +129,18 @@ app.get('/todoUpdate', (req, res)=>{
 
 // update query
 app.post("/todoUpdate", (req, res)=>{
-    let task = req.body.task;
-    let id = req.body.id;
+    var task = req.body.task;
+    var id = req.body.id;
 
     console.log(id, task);
 
-    let sql = `UPDATE tasks SET task=? WHERE id=?;`;
+    let sql = `UPDATE tasks SET task = ? WHERE id = ?;`;
 
-    conn.query(sql, [id, task], (err, result)=>{
-        if (err) throw err;
+    conn.query(sql, [task, id], (err, result)=>{
+        if (err) console.log(err);
         // res.render('todo');
+
+        console.log('Data updated')
         res.redirect('/todoList');
     })
 })
