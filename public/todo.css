@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif; */
+    font-family: "Quicksand";
     font-size: 16px;
 }
 body {
@@ -26,6 +27,12 @@ body {
     color: white;
 }
 
+.todo-div .tasks-head{
+    color: #EE9338;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 22px;
+}
 .todo-form {
     text-align: center;
 }
@@ -38,9 +45,18 @@ body {
     /* font-weight: bold; */
     color: #ffffff;
     padding: 6px;
-    width: 60px;
+    min-width: 60px;
+    height: 50px;
     border-radius: 4px;
     transition: background-color 0.2s;
+}
+
+.todo-form input[type=text] {
+    background-color: #1E1E20;
+    color: #ffffff;
+    width: 60%;
+    height: 50px;
+    font-size: 22px;
 }
 
 .todo-form input {
@@ -48,6 +64,25 @@ body {
     font-size: 20px;
 }
 
+.todo-form input:read-only {
+    max-width: 60px;
+}
+
 .todo-form input[type=submit]:hover {
     background-color: #c7946b;
+}
+
+table {
+    /* width: 90%; */
+    margin: 0 auto;
+}
+
+table a {
+    color: aliceblue;
+    color: white;
+    text-decoration: none;
+}
+
+table th {
+    font-size: 20px;
 }

@@ -15,12 +15,14 @@
             <input type="text" name="task" placeholder="Input task" required />
             <input type="submit" value="Add">
         </form>
+        <h1 class="tasks-head">Current tasks</h1>
         <table>
             <tr>
                 <th>Id</th>
                 <th>Task</th>
                 <th>Update</th>
                 <th>Delete</th>
+                <th>Complete</th>
             </tr>
             <!-- input dynamic data -->
             <% if(tasks != {}){ %>
