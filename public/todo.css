@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: aliceblue;
+}
+
+.todo-div{
+    background-color: #5F5F71;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+    min-height: 70vh;
+
+}
+
+.todo-div .todo-title {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color: white;
+}
+
+.todo-form {
+    text-align: center;
+}
+
+.todo-form input[type=submit] {
+    background-color: #EE9338;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* font-weight: bold; */
+    color: #ffffff;
+    padding: 6px;
+    width: 60px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.todo-form input {
+    padding: 4px;
+    font-size: 20px;
+}
+
+.todo-form input[type=submit]:hover {
+    background-color: #c7946b;
+}

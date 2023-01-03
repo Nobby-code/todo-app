@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link href="todo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav class="nav" style="
+display: flex; flex-direction: row; justify-content: space-around;
+">
+        <ul style="display: flex; flex-direction: row; justify-content: space-between;">
+            <li style="padding: 10px; list-style: none;"><a href="/"
+                    style="text-decoration: none; font-weight: bold;">Home</a></li>
+            <li style="padding: 10px; list-style: none;"><a href="/contact"
+                    style="text-decoration: none; font-weight: bold;">Help</a></li>
+        </ul>
+        <a href="/" style="text-decoration: none; color: teal;
+    font-size: 20px; margin-top: 5px;
+    ">Logout</a>
+    </nav>
+    <div class="todo-div">
+        <h1 class="todo-title">To-Do List</h1>
+        <form action="/todoList" method="POST" class="todo-form">
+            <input type="text" name="task" placeholder="Input task" required />
+            <input type="submit" value="Add">
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Task</th>
+                <th>Update</th>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

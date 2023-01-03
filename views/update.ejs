@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo update</title>
+    <link href="todo.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <div class="todo-div">
+        <h1 class="todo-title">To-Do List</h1>
+        <form action="/todoUpdate" method="POST" class="todo-form">
+            <input type="text" name="id" value="<%= tasks[0].id %>" readonly />
+            <input type="text" name="task" value="<%= tasks[0].task %>" placeholder="Input task" required />
+            <input type="submit" value="Update">
+        </form>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
