@@ -20,6 +20,7 @@
                 <th>Id</th>
                 <th>Task</th>
                 <th>Update</th>
+                <th>Delete</th>
             </tr>
             <!-- input dynamic data -->
             <% if(tasks != {}){ %>
@@ -27,7 +28,8 @@
                     <tr>
                         <td><%= tasks[i].id %></td>
                         <td><%= tasks[i].task %></td>
-                        <td><a href="/todoUpdate?id=<%- tasks[i].id %>" target="_blank">Update</a></td>
+                        <td><a href="/todoUpdate?id=<%- tasks[i].id %>">Update</a></td>
+                        <td><a href="/todoDelete?id=<%- tasks[i].id %>">Delete</a></td>
                     </tr> 
               <%  } %>
            <% } else { %>

@@ -93,6 +93,7 @@ app.post('/', urlEncodedParser, (req, res) => {
 //     res.render("todo");
 //   });  
 
+// Adding a new task
 app.post('/todoList', (req, res) => {
     var task = req.body.task;
 
@@ -142,6 +143,17 @@ app.post("/todoUpdate", (req, res)=>{
 
         console.log('Data updated')
         res.redirect('/todoList');
+    })
+})
+
+// Delete task from database
+app.get('/todoDelete', (req, res)=>{
+    var sql = `DELETE FROM tasks WHERE id = ?;`;
+    var id = req.query.id;
+
+    conn.query(sql, [id], (err, result)=>{
+        if (err) console.log(err);
+        res.redirect('/todoList')
     })
 })
 app.get('/contact', (req, res)=>{
