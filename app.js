@@ -23,14 +23,16 @@ app.use(express.static('./public'))
 
 
 // routes
-
 app.get('/', (req, res)=>{
+    res.render('landing');
+})
+app.get('/auth', (req, res)=>{
     // res.sendFile(__dirname + '/index.html')
     res.render('index')
 });
 
 // Adding user to the database
-app.post('/', (req, res) => {
+app.post('/auth', (req, res) => {
     var fullname =  req.body.fullname;
     var username =  req.body.username;
     var email = req.body.email;

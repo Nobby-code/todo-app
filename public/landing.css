@@ -1,0 +1,29 @@
+.landing-page {
+    width: 80%;
+    background-color: aliceblue;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+.landing-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 15px;
+}
+
+.landing-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+main h1{
+    width: 48%;
+    font-family: "Quicksand";
+}

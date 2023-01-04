@@ -33,7 +33,7 @@
 <body>
     <div class="login">
         <h1 id="login-header">Login or Sign Up</h1>
-        <form action="/" method="GET" class="login-form">
+        <form action="/auth" method="GET" class="login-form">
             <label for="username">
                 <!-- font awesome icon -->
                 <i class="fas fa-user"></i>
@@ -46,7 +46,7 @@
             <input type="submit" value="Login">
             <p class="message">No Account? <a href="#">Sign Up</a></p>
         </form>
-        <form action="/" method="POST" class="registration-form" id="reg-form">
+        <form action="/auth" method="POST" class="registration-form" id="reg-form">
             <input type="text" name="fullname" placeholder="fullname" id="username" required>
             <input type="text" name="username" placeholder="Username" id="username" required>
             <input type="text" name="email" placeholder="email" id="username" required>
