@@ -11,25 +11,30 @@
 
 <body>
     <div class="landing-page">
+        
+
         <div class="landing-header">
-            <h1>Daily manual</h1>
-            <div>
+            <em>Daily manual</em>
+            <div class="navs">
                 <a href="/">Home</a>
                 <a href="/contact">Contact</a>
                 <a href="/about">About</a>
             </div>
-            <a href="/auth">login or sign up</a>
+            <!-- <a href="/auth">login or sign up</a> -->
         </div>
         <div>
             <main>
-                <div>
+                <div class="description">
                     <h4>Daily manual application offers</h4>
                     <h1>The best way to organize and track your daily activities</h1>
                     <h4>Organize your tasks, lists and reminder in one application</h4>
-                    <a href="/auth">get Started</a>
+                    
                 </div>
-                <img src="todo-image.avif" />
+                <div class="image">
+                    <img src="todo-image.avif" />
+                </div>
             </main>
+            <a href="/auth" class="get-started">Get Started</a>
 
         </div>
         <%- include('partials/footer.ejs') %>

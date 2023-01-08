@@ -1,0 +1,121 @@
+/* .contacts-header {
+    width: 8%;
+    border-bottom: 4px solid #FF5C58;
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .contacts .contacts-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .contacts-content h2,
+  .sites-header {
+    font-family: 'Roboto';
+    color: #FF5C58;
+  }
+  
+  .contacts-content ul {
+    list-style: none;
+  }
+  
+  .contacts-content ul li {
+    margin: 10px 0;
+  }
+  
+  .my-contact {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .contacts-content .social-links span {
+    padding: 15px;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .contacts-content .social-links em {
+    font-size: 22px;
+    color: wheat;
+    padding-top: 10px;
+  }
+  
+  .my-contact-icons {
+    color: rgba(12, 12, 12, 0.964);
+    margin: 0 10px;
+  }
+  
+  .mailing {
+    text-align: left;
+    width: 50%;
+  }
+  
+  .contacts-form input {
+    width: 350px;
+    height: 55px;
+    margin: 5px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border: none;
+  }
+  
+  .contacts-form input:hover {
+    border-bottom: 2px solid white;
+  }
+  
+  .contact-inform-div h1 {
+    margin: 12px;
+  }
+  
+  .contact-inform-div .contactpage-links p {
+    padding: 10px;
+  }
+  
+  textarea {
+    font-size: 18px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+  
+  .mailing h3 {
+    color: #FF5C58;
+  }
+  
+  .contacts-button {
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+    background-color: teal;
+    font-size: 18px;
+    color: white;
+    transition: all .2s ease-out;
+  }
+  
+  .contacts-button:hover {
+    cursor: pointer;
+    background-color: #59b256;
+    color: black;
+    transform: scale(1.05);
+  
+  
+  } */
+  
+
+  .contacts .contacts-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .first-cont-info h2{
+    color: blue;
+  }
+  

@@ -6,11 +6,14 @@ const conn = require('./connection');
 
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: true}))
+app.use(bodyParser.urlencoded({ extended: false}))
 
 var urlEncodedParser = bodyParser.urlencoded({ extended: false})
 
 app.use(bodyParser.json());
+
+var v = false;
+
 
 
 
@@ -51,49 +54,27 @@ app.post('/auth', (req, res) => {
 })
 
 //User authentication
-app.post('/', urlEncodedParser, (req, res) => {
-    const { username, passwod } = req.body
+app.post('/login', (req, res)=>{
+    var username = req.body.user;
+    var password = req.body.pass;
 
-    conn.query("SELECT * FROM users WHERE username = ?", [username, passwod], (err, result, fields)=>{
-        if (result.length > 0) {
-            res.render('todo');
+    conn.query(`SELECT * FROM users WHERE username = ? AND password = ?`,
+    [username, password],
+    (err, results, fields)=>{
+        if( username && password){
+            if (results.length > 0) {
+                console.log('success');
+                res.redirect('/todoList');
+            } else {
+                res.sendFile(__dirname + '/loginError.html');
+            }
+
         } else {
-            console.log('Nothing to show')
+            res.send('Pleas enter username and password');
         }
+        
     })
 })
-
-
-
-// //Insert tasks into database
-// app.post('/todo', (req, res) => {
-//     var task = req.body.task;
-
-//     var sql = `INSERT INTO tasks (task)
-//     VALUES (?);`;
-//     conn.query(sql, [task], (err, results) => {
-//         if (err) throw err;
-//         console.log(results);
-//         res.render('todo', {tasks: results});
-//     });
-    
-// });
-
-// // Select tasks from the database 
-// app.get('/todo', (req, res) => {
-//     var sql = `SELECT * FROM tasks;`;
-
-//     conn.query(sql, (err, results)=>{
-//         if (err) console.log(err.message);
-
-//         // console.log(results)
-//         res.render("todo", { tasks: results});
-//     });
-// });
-
-// app.get('/todoList', (req, res) => {
-//     res.render("todo");
-//   });  
 
 // Adding a new task
 app.post('/todoList', (req, res) => {

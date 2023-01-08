@@ -78,3 +78,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+#cred{
+    /* display: none; */
+}
