@@ -12,18 +12,11 @@ var urlEncodedParser = bodyParser.urlencoded({ extended: false})
 
 app.use(bodyParser.json());
 
-var v = false;
-
-
-
-
 //set ejs view
 app.set('view engine', 'ejs')
 
 //static files
 app.use(express.static('./public'))
-
-
 
 // routes
 app.get('/', (req, res)=>{
@@ -122,9 +115,6 @@ app.post("/todoUpdate", (req, res)=>{
 
     conn.query(sql, [task, id], (err, result)=>{
         if (err) console.log(err);
-        // res.render('todo');
-
-        console.log('Data updated')
         res.redirect('/todoList');
     })
 })
@@ -140,8 +130,6 @@ app.get('/todoDelete', (req, res)=>{
     })
 })
 app.get('/contact', (req, res)=>{
-    // res.sendFile(__dirname + '/contact.html')
-    // console.log(req.query)
     res.render('contact')
 });
 
